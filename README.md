@@ -1,3 +1,3 @@
 # Hello-world
 
-Test using unittest
+print("Hello, world!")
