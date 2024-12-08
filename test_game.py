@@ -1,7 +1,8 @@
 import unittest
-from rock_paper import determine_winner, play_again  # Import the refactored functions
+from rock_paper import determine_winner, play_again
 
 class TestRockPaperScissors(unittest.TestCase):
+    # 함수명은 test로 시작해야 한다.
     def test_determine_winner(self):
         # Test for ties
         self.assertEqual(determine_winner("rock", "rock"), "Tie")
@@ -19,9 +20,7 @@ class TestRockPaperScissors(unittest.TestCase):
         self.assertEqual(determine_winner("paper", "scissors"), "Lose")
 
     def test_play_again(self):
-        # Test for continuing the game
         self.assertTrue(play_again("yes"))
-        # Test for exiting the game
         self.assertFalse(play_again("no"))
 
 if __name__ == "__main__":
